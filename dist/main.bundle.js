@@ -216,10 +216,10 @@ var AuthService = /** @class */ (function () {
         this.router = router;
     }
     AuthService.prototype.registerUser = function (user) {
-        return this.http.post('http://localhost:3000/api/register', user);
+        return this.http.post('/api/register', user);
     };
     AuthService.prototype.loginUser = function (user) {
-        return this.http.post('http://localhost:3000/api/login', user);
+        return this.http.post('/api/login', user);
     };
     AuthService.prototype.loggedIn = function () {
         return !!localStorage.getItem('token');
@@ -301,13 +301,13 @@ var HttpService = /** @class */ (function () {
         this.http = http;
     }
     HttpService.prototype.getData = function () {
-        return this.http.get('http://localhost:3000/api/data');
+        return this.http.get('/api/data');
     };
     HttpService.prototype.updateData = function (data) {
-        return this.http.put('http://localhost:3000/api/update/' + data._id, data);
+        return this.http.put('/api/update/' + data._id, data);
     };
     HttpService.prototype.deleteData = function (data) {
-        return this.http.delete('http://localhost:3000/api/delete/' + data._id);
+        return this.http.delete('/api/delete/' + data._id);
     };
     HttpService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
