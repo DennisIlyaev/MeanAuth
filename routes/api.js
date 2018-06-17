@@ -77,6 +77,12 @@ router.delete('/delete/:id', (req, res) => {
     });
 });
 
+setInterval(function() {
+    router.get("https://dennisilyaevtest123.herokuapp.com/home");
+}, 300000);
+
+
+
 
 
 module.exports = router;
